@@ -1,7 +1,7 @@
 {
   "name": "compute-flatten",
   "version": "0.0.0",
-  "description": "Flattens an array containing nested arrays.",
+  "description": "Flattens an array.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -25,12 +25,32 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "utils",
+    "utilities",
+    "flatten",
+    "linearize",
+    "flat",
+    "array",
+    "vector",
+    "matrix",
+    "reshape",
+    "analysis",
+    "data",
+    "math",
+    "mathematics"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/flatten/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "utils-copy": "^1.0.0",
+    "validate.io-array": "^1.0.3",
+    "validate.io-boolean-primitive": "^1.0.0",
+    "validate.io-nonnegative-integer": "^1.0.0",
+    "validate.io-object": "^1.0.3",
+    "validate.io-positive-integer-array": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",
