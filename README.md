@@ -34,7 +34,7 @@ var out = flatten( arr );
 The `function` accepts the following `options`:
 -	__depth__: nonnegative `integer` specifying the depth to which the input `array` should be flattened. Default: `Number.POSITIVE_INFINITY`.
 -	__matrix__: `boolean` indicating whether the function can assume that the input `array` is a matrix; i.e., an `array` (of `arrays`) having uniform dimensions. Default: `false`.
--	__copy__: `boolean` indicating whether `array` elements should be deep copied. Default: `false`.
+-	__copy__: `boolean` indicating whether `array` elements should be [deep copied](https://github.com/kgryte/utils-copy). Default: `false`.
 
 To limit the depth to which the input `array` is flattened, set the `depth` option:
 
@@ -47,7 +47,7 @@ var out = flatten( arr, opts );
 // returns [ 1, 2, [3, [4, [ 5 ], 6], 7], 8, 9 ]
 ```
 
-To deep copy flattened `array` elements, set the `copy` option to `true`.
+To [deep copy](https://github.com/kgryte/utils-copy) flattened `array` elements, set the `copy` option to `true`.
 
 ``` javascript
 var opts = {
@@ -104,10 +104,10 @@ var out = flat( arr );
 ```
 
 The `function` accepts the following `options`:
--	__copy__: `boolean` indicating whether `array` elements should be deep copied. Default: `false`.
+-	__copy__: `boolean` indicating whether `array` elements should be [deep copied](https://github.com/kgryte/utils-copy). Default: `false`.
 
 
-To deep copy flattened `array` elements, set the `copy` option to `true`.
+To [deep copy](https://github.com/kgryte/utils-copy) flattened `array` elements, set the `copy` option to `true`.
 
 ``` javascript
 var dims = [ 3, 3 ];
@@ -134,7 +134,7 @@ console.log( arr[1][1] === out[4] );
 
 __Notes__:
 -	when repeatedly flattening `arrays` having the same shape, creating and applying a customized `flatten` function will provide performance benefits.
--	no attempt is made to validate that input `arrays` actually have the specified dimensions. Input values are assumed to be valid `arrays`. If validation is needed, see [validate.io-size](https://github.com/validate-io/size).
+-	__no__ attempt is made to validate that input `arrays` actually have the specified dimensions. Input values are __assumed__ to be valid `arrays`. If validation is needed, see [validate.io-size](https://github.com/validate-io/size).
 
 
 
