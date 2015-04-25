@@ -47,7 +47,7 @@ var out = flatten( arr, opts );
 // returns [ 1, 2, 3, [4, [ 5 ], 6], 7, 8, 9 ]
 ```
 
-To [deep copy](https://github.com/kgryte/utils-copy) flattened `array` elements, set the `copy` option to `true`.
+To [deep copy](https://github.com/kgryte/utils-copy) `array` elements, set the `copy` option to `true`.
 
 ``` javascript
 var opts = {
@@ -109,7 +109,7 @@ The `function` accepts the following `options`:
 -	__copy__: `boolean` indicating whether `array` elements should be [deep copied](https://github.com/kgryte/utils-copy). Default: `false`.
 
 
-To [deep copy](https://github.com/kgryte/utils-copy) flattened `array` elements, set the `copy` option to `true`.
+To [deep copy](https://github.com/kgryte/utils-copy) `array` elements, set the `copy` option to `true`.
 
 ``` javascript
 var dims = [ 3, 3 ];
