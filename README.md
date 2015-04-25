@@ -161,7 +161,7 @@ N = 1000;
 M = 100;
 L = 10;
 
-// Create a 3D array...
+// Create an NxMxL (3D) array...
 data = new Array( N );
 for ( i = 0; i < N; i++ ) {
 	tmp1 = new Array( M );
