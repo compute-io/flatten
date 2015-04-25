@@ -38,7 +38,8 @@
     "analysis",
     "data",
     "math",
-    "mathematics"
+    "mathematics",
+    "strided"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/flatten/issues"
