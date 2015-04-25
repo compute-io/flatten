@@ -44,7 +44,7 @@ var opts = {
 };
 
 var out = flatten( arr, opts );
-// returns [ 1, 2, [3, [4, [ 5 ], 6], 7], 8, 9 ]
+// returns [ 1, 2, 3, [4, [ 5 ], 6], 7, 8, 9 ]
 ```
 
 To [deep copy](https://github.com/kgryte/utils-copy) flattened `array` elements, set the `copy` option to `true`.
@@ -56,9 +56,9 @@ var opts = {
 };
 
 var out = flatten( arr, opts );
-// returns [ 1, 2, [3, [4, [ 5 ], 6], 7], 8, 9 ]
+// returns [ 1, 2, 3, [4, [ 5 ], 6], 7, 8, 9 ]
 
-console.log( arr[1][1] === out[2] );
+console.log( arr[1][1][1] === out[3] );
 // returns false
 ```
 
@@ -79,7 +79,9 @@ var out = flatten( arr, opts );
 // returns [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 ```
 
-__Note__: if repeatedly flattening `arrays` having the same dimensions, create a customized flatten `function`, as documented below.
+__Notes__:
+-	this `function` handles the generic case where an `array` may be heterogeneous (contain mixed data types) or have unknown dimensions. 
+-	if repeatedly flattening `arrays` having the same dimensions, create a customized flatten `function`, as documented below.
 
 
 
