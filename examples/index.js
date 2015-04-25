@@ -104,3 +104,49 @@ console.log( out );
 
 console.log( arr[1][1] === out[4] );
 // returns false
+
+
+// [6] Strided arrays:
+console.log( '\nStrided Arrays:\n' );
+
+var xStride,
+	yStride,
+	zStride,
+	data,
+	tmp1,
+	tmp2,
+	val,
+	N, M, L,
+	i, j, k;
+
+N = 1000;
+M = 100;
+L = 10;
+
+// Create a 3D array...
+data = new Array( N );
+for ( i = 0; i < N; i++ ) {
+	tmp1 = new Array( M );
+	for ( j = 0; j < M; j++ ) {
+		tmp2 = new Array( L );
+		for ( k = 0; k < L; k++ ) {
+			tmp2[ k ] = M*L*i + j*L + k + 1;
+		}
+		tmp1[ j ] = tmp2;
+	}
+	data[ i ] = tmp1;
+}
+// Create a flattened (strided) array:
+arr = flatten( data );
+
+// To access the data[4][20][2] element...
+xStride = M * L;
+yStride = L;
+zStride = 1;
+val = arr[ 4*xStride + 20*yStride + 2*zStride ];
+
+console.log( val );
+// returns 4203
+
+console.log( data[4][20][2] === val );
+// returns true
